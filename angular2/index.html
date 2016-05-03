@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Angular 2</title>
 	<!--Add Bootstrap CSS Styles-->
-	<link rel="stylesheet" href="./bower_components/Materialize/dist/css/materialize.min.css">
+	<link rel="stylesheet" href="./bower_components/Materialize/dist/css/materialize.css">
 </head>
 <body>
 
@@ -15,26 +15,23 @@
 
 
 	<!-- IE required polyfills, in this exact order -->
+	<!-- <reference path="./typings/jquery/jquery.d.ts" /> -->
 	<!-- <script src="./typings/jquery/jquery.d.ts"></script> -->
 	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="./bower_components/hammerjs/hammer.min.js"></script>
-	<script src="./node_modules/hammerjs/hammer.min.js"></script>
 	<script src="./node_modules/es6-shim/es6-shim.min.js"></script>
 	<!-- <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script> -->
 	<script src="./node_modules/systemjs/dist/system-polyfills.js"></script>
 
 	<!-- Angular polyfill required everywhere -->
 	<script src="./node_modules/angular2/bundles/angular2-polyfills.js"></script>
-
-	<script src="./node_modules/requirejs/require.js"></script>
-	<script src="./node_modules/systemjs/dist/system.js"></script>
+	<script src="./node_modules/systemjs/dist/system.src.js"></script>
 	<script src="./node_modules/typescript/lib/typescript.js"></script>
 	<script src="./node_modules/rxjs/bundles/Rx.js"></script>
-
 	<script src="./node_modules/angular2/bundles/angular2.dev.js"></script>
 	<script src="./node_modules/angular2/bundles/http.dev.js"></script>
 	<script src="./node_modules/angular2/bundles/router.dev.js"></script>
 	<script src="./bower_components/Materialize/dist/js/materialize.js"></script>
+
 	<script>
 		System.config({
 			transpiler: 'typescript',
@@ -48,28 +45,29 @@
 		.then(null, console.error.bind(console));
 	</script>
 
-	<nav>
-		<ul class="left hide-on-med-and-down">
-			<a class="waves-effect waves-light btn" onclick="toogleSideNav()">button</a>
-		</ul>
+
+	<!-- <nav>
+		<a class="waves-effect waves-light btn" onclick="toogleSideNav()">button</a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="#!">First Sidebar Link</a></li>
-			<li><a href="#!">Second Sidebar Link</a></li>
+			<li><a [routerLink]="['Home']">Home</a></li>
+			<li><a [routerLink]="['About']">About</a></li>
+			<li><a [routerLink]="['Experiments']">Experiments</a></li>
 		</ul>
 		<ul id="slide-out" class="side-nav">
-			<li><a href="#!">First Sidebar Link</a></li>
-			<li><a href="#!">Second Sidebar Link</a></li>
+			<li><a [routerLink]="['Home']">Home</a></li>
+			<li><a [routerLink]="['About']">About</a></li>
+			<li><a [routerLink]="['Experiments']">Experiments</a></li>
 		</ul>
-		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		<a href="" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 	</nav>
-
-	<div class="container">
+ -->
+	<!-- <div class="container">
 		<div class="row">
-			<div class="col s12">
-				<my-app>Loading ngFor Demo ...</my-app>
-			</div>
+			<div class="col s12"> -->
+				<app>Loading...</app>
+			<!-- </div>
 		</div>
-	</div>
+	</div> -->
 	<script>
 		$(".button-collapse").sideNav({
 			menuWidth: 300, // Default is 240
