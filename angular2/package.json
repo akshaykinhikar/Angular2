@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "lite-server"
+   "scripts": {
+      "tsc": "tsc",
+      "tsc:w": "tsc -w",
+      "lite": "lite-server",
+      "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
   },
   "author": "Mohit Patil",
   "license": "ISC",
